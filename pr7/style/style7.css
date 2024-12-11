@@ -1,0 +1,79 @@
+body {
+    font-family: "Arial, sans-serif";
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("imeg/background.gif") center / cover no-repeat; /* Фон з GIF */
+    background-attachment: fixed; /* Фон залишається фіксованим під час прокручування */
+    overflow: hidden; /* Заборона прокручування */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.window-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозора темна рамка */
+    padding: 40px;
+    border-radius: 25px; /* Округлені кути для вигляду віконця */
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.6); /* Легка біла рамка навколо тексту */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8); /* Тінь для ефекту віконця */
+}
+
+.header__title {
+    color: #e0f7fa;
+    font-size: 3.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.intro__text {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    line-height: 1.5;
+}
+
+.link {
+    color: #e0f7fa;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #b2ebf2;
+}
+
+.button-wrapper {
+    margin-top: 30px;
+}
+
+.button {
+    background-color: #e0f7fa;
+    color: #333;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #b2ebf2;
+    transform: scale(1.1);
+}

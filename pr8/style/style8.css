@@ -1,0 +1,101 @@
+/* Основні стилі сторінки */
+body {
+    margin: 0; /* Прибирає стандартні відступи браузера */
+    overflow: hidden; /* Забороняє прокручування */
+    height: 100vh; /* Встановлює висоту сторінки рівною висоті вікна */
+    background: url('imeg/sony-vr-background.jpg') no-repeat center center fixed; /* Задній фон для окулярів Sony */
+    background-size: cover; /* Зображення займає всю площу */
+}
+
+/* Контейнер для основного контенту */
+.page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Основне зображення на передньому плані */
+.page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('imeg/sony-vr-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    z-index: 1; /* Забезпечує, що зображення буде на передньому плані */
+    opacity: 0.85; /* Налаштуйте прозорість, якщо потрібно */
+}
+
+/* Контент на передньому плані */
+.page > * {
+    position: relative;
+    z-index: 2; /* Цей елемент буде відображатися поверх основного фону */
+}
+
+/* Блок header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+    -1px -1px 0 black, 
+     1px -1px 0 black, 
+    -1px  1px 0 black, 
+     1px  1px 0 black;
+}
+
+/* Блок intro */
+.intro {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний фон для блоку з текстом */
+    border-radius: 10px;
+}
+
+.intro__text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 
+    -1px -1px 0 black, 
+     1px -1px 0 black, 
+    -1px  1px 0 black, 
+     1px  1px 0 black;
+}
+
+/* Блок button */
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button--primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button--primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

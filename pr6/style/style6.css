@@ -1,0 +1,92 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Основна сцена */
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #87ceeb, #90ee90);
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://wallpaperaccess.com/full/1387296.jpg') no-repeat center/cover;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Контейнер для покемонів */
+.pokemon-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.pokemon {
+    position: absolute;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+}
+
+.pokemon img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.pokemon img:hover {
+    transform: scale(1.2);
+}
+
+/* Панель результату */
+.scoreboard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Анімації для польоту покемонів */
+@keyframes fly-horizontal {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes fly-vertical {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}

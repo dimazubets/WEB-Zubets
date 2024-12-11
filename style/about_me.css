@@ -1,0 +1,143 @@
+/* Глобальний стиль для сторінки "Про мене" */
+body {
+    background: url('imeg/background.gif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ecf0f1; /* Білий текст */
+}
+
+header {
+    padding: 1.5em 0;
+    text-align: center;
+    background-color: rgba(44, 62, 80, 0.9); /* Темний фон */
+    color: #ecf0f1; /* Білий текст */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: rgba(52, 73, 94, 0.8); /* Темніший фон */
+    margin: 0;
+    padding: 0.5em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Білий текст */
+    padding: 0.75em 1em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: #1abc9c; /* Активне посилання — зелений */
+    color: #fff; /* Білий текст */
+}
+
+nav ul li a:hover {
+    background-color: #16a085; /* Зелений при наведенні */
+    border-color: rgba(22, 160, 133, 1);
+    color: #ecf0f1; /* Білий текст */
+}
+
+section#about {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: rgba(44, 62, 80, 0.9); /* Також темний фон, як у "Про мене" */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    border: 2px solid rgba(44, 62, 80, 0.8); /* Темний контур */
+}
+
+section#about img.profile-pic {
+    flex-shrink: 0;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+section#about h2 {
+    font-size: 2.5em;
+    color: #ecf0f1; /* Білий текст */
+    margin-bottom: 1em;
+}
+
+section#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section#about ul li {
+    background-color: rgba(52, 73, 94, 0.8); /* Віконце такого ж кольору, як на сторінці "Про мене" */
+    padding: 1.5em;
+    margin: 1em 0;
+    border-radius: 10px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+section#about ul li::-webkit-scrollbar {
+    height: 10px;
+}
+
+section#about ul li::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+section#about ul li::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: rgba(44, 62, 80, 0.9); /* Темний фон */
+    color: #ecf0f1; /* Білий текст */
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 2em;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #1abc9c; /* Зелений для посилань */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #16a085; /* Зелений при наведенні */
+}

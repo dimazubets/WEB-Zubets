@@ -1,0 +1,176 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #4a90e2, #e1eaf4), url('imeg/background.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.planner {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planner:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to right, #007acc, #005f99);
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.week-habit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.week-habit input {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.week-habit input:focus {
+    border-color: #007acc;
+    outline: none;
+}
+
+.check-group label {
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+.check-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.content {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+aside {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+aside:hover {
+    background-color: #eef7ff;
+}
+
+aside h2 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #005f99;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+aside ul li input[type="text"] {
+    flex: 1;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+aside ul li input[type="text"]:focus {
+    border-color: #007acc;
+    outline: none;
+}
+
+main {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.day {
+    flex: 1 1 calc(33.333% - 15px);
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.day h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-size: 1.3rem;
+    color: #007acc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.day textarea {
+    flex: 1;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+    height: 120px;
+    transition: border-color 0.3s;
+}
+
+.day textarea:focus {
+    border-color: #007acc;
+    outline: none;
+}

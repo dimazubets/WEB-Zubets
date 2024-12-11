@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header .header-left img {
+            height: 25px;
+        }
+        header .header-left span {
+            font-weight: 600;
+            margin-left: 10px;
+            color: #555;
+        }
+        header .header-center {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        header .header-center .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #efefef;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        header .header-center .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            flex-grow: 1;
+            font-size: 14px;
+            padding: 5px;
+        }
+        header .header-center .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #555;
+        }
+        header .header-right .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #555;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+        .container {
+            display: flex;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 60px);
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .sidebar ul li i {
+            margin-right: 10px;
+            color: #777;
+        }
+        .sidebar ul li:hover {
+            background-color: #f0f0f0;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .video-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .video-card {
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            text-align: center;
+        }
+        .thumbnail {
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+        }
+        .video-info {
+            padding: 15px;
+            font-size: 14px;
+        }
+        .video-info h4 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 16px;
+            color: #333;
+        }
+        .video-info p {
+            margin: 5px 0 0;
+            font-size: 12px;
+            color: #666;
+        }
+        .channel-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .channel-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .channel-info span {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+            <span>Premium</span>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn"><i class="fas fa-video"></i></button>
+            <button class="icon-btn"><i class="fas fa-th"></i></button>
+            <button class="icon-btn"><i class="fas fa-bell"></i></button>
+            <button class="icon-btn"><i class="fas fa-user-circle"></i></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><i class="fas fa-home"></i> Головна</li>
+                <li><i class="fas fa-fire"></i> Популярне</li>
+                <li><i class="fas fa-play-circle"></i> Ваші відео</li>
+                <li><i class="fas fa-clock"></i> Переглянути пізніше</li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section class="video-grid">
+                <!-- Перше відео -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                        <div class="thumbnail" style="background-image: url('https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg');"></div>
+                    </a>
+                    <div class="video-info">
+                        <h4>Rick Astley - Never Gonna Give You Up (Video)</h4>
+                        <p>RickAstleyVEVO</p>
+                        <p>1.1 млрд переглядів • 14 років тому</p>
+                    </div>
+                </div>
+
+                <!-- Друге відео -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ" target="_blank">
+                        <div class="thumbnail" style="background-image: url('https://i.ytimg.com/vi/3JZ_D3ELwOQ/hqdefault.jpg');"></div>
+                    </a>
+                    <div class="video-info">
+                        <h4>Ed Sheeran - Shape of You (Official Music Video)</h4>
+                        <p>Ed Sheeran</p>
+                        <p>5.3 млрд переглядів • 7 років тому</p>
+                    </div>
+                </div>
+
+                <!-- Третє відео -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=ZbZSe6N_BXs" target="_blank">
+                        <div class="thumbnail" style="background-image: url('https://i.ytimg.com/vi/ZbZSe6N_BXs/hqdefault.jpg');"></div>
+                    </a>
+                    <div class="video-info">
+                        <h4>LMFAO - Party Rock Anthem (Official Video)</h4>
+                        <p>LMFAO</p>
+                        <p>1.5 млрд переглядів • 12 років тому</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+l>

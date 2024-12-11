@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2 - Реєстрація</title>
+    <link rel="stylesheet" href="style/style2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Заголовок -->
+    <header>
+        <h1>Лабораторна робота №2</h1>
+        <h2>Реєстраційна форма</h2>
+    </header>
+
+    <!-- Основна частина -->
+    <main>
+        <section class="form-container">
+            <h3>Заповніть форму для реєстрації</h3>
+            <form action="https://webhook.site/your-unique-url" method="POST">
+                <table>
+                    <tr>
+                        <td><label for="firstName">Ім'я:</label></td>
+                        <td><input type="text" id="firstName" name="firstName" placeholder="Ваше ім'я" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastName">Прізвище:</label></td>
+                        <td><input type="text" id="lastName" name="lastName" placeholder="Ваше прізвище" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Електронна пошта:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="name@example.com" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Пароль:</label></td>
+                        <td><input type="password" id="password" name="password" placeholder="Пароль" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirmPassword">Підтвердження паролю:</label></td>
+                        <td><input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторіть пароль" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="birthDate">Дата народження:</label></td>
+                        <td><input type="date" id="birthDate" name="birthDate"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Стать:</label></td>
+                        <td>
+                            <select id="gender" name="gender">
+                                <option value="male">Чоловік</option>
+                                <option value="female">Жінка</option>
+                                <option value="other">Інше</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="hobby">Ваше захоплення:</label></td>
+                        <td>
+                            <select id="hobby" name="hobby">
+                                <option value="webdev">Веброзробка</option>
+                                <option value="ai">Штучний інтелект</option>
+                                <option value="diy">DIY-проєкти</option>
+                                <option value="other">Інше</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="about">Розкажіть про себе:</label></td>
+                        <td><textarea id="about" name="about" placeholder="Кілька слів про вас" rows="4"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit">Зареєструватися</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p>© 2024 Зубець Дмитро</p>
+        <p>
+            <strong>Контакти:</strong> 
+            <a href="mailto:email@example.com">email@example.com</a>
+        </p>
+    </footer>
+</body>
+</html>

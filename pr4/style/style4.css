@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa; /* М'якший фон для зручності перегляду */
+    color: #333;
+    line-height: 1.6; /* Покращення читабельності тексту */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Збільшено для більшого комфорту */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left, .header-right, .header-center {
+    display: flex;
+    align-items: center;
+}
+
+.youtube-logo {
+    height: 30px; /* Збільшено для кращої видимості */
+    margin-right: 15px;
+}
+
+.premium {
+    color: #ff5722; /* Оновлений колір для акценту */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #eef3f8; /* Світліший фон для більш сучасного вигляду */
+    border-radius: 25px;
+    padding: 8px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.search-bar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 8px;
+    width: 250px; /* Розширено для зручності */
+}
+
+.search-bar .search-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.search-bar .search-btn:hover {
+    color: #000;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: #000;
+}
+
+.categories ul {
+    display: flex;
+    overflow-x: auto;
+    list-style: none;
+    margin: 15px 20px;
+    padding: 0;
+    gap: 10px;
+}
+
+.categories li {
+    padding: 8px 15px;
+    background: #eef3f8; /* Світліший фон */
+    border-radius: 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.categories li:hover {
+    background: #d4e2f1;
+}
+
+.sidebar {
+    width: 260px; /* Ширше для зручності */
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Фіксована висота для зручності навігації */
+    overflow-y: auto; /* Прокрутка при необхідності */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li i {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.sidebar nav ul li:hover {
+    color: #ff5722;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Адаптивні відео-карти */
+    gap: 25px;
+    padding: 20px;
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-info h4 {
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.video-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.channel-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ddd; /* Акцент на аватарі */
+}
+
+.channel-info span {
+    font-size: 14px;
+    color: #555;
+}
+

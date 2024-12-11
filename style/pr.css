@@ -1,0 +1,180 @@
+/* Стиль для сторінки практичних робіт під єдиний стиль */
+body {
+    background: url('imeg/background.gif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    padding: 2em 0;
+    text-align: center;
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #ecf0f1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: rgba(52, 73, 94, 0.8);
+    margin: 0;
+    padding: 0.5em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.active {
+    background-color: rgba(26, 188, 156, 0.8);
+    color: #ecf0f1;
+}
+
+nav ul li a:hover {
+    background-color: rgba(26, 188, 156, 0.8);
+    color: #ecf0f1;
+}
+
+section#practical-list {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: rgba(52, 73, 94, 0.8); /* Той самий фон для практичних робіт */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+section#practical-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section#practical-list ul li {
+    background-color: rgba(44, 62, 80, 0.9); /* Темніше, ніж фон практичних робіт */
+    padding: 1.5em;
+    margin: 1em 0;
+    border-radius: 10px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #fff; /* Зробити текст білим */
+}
+
+section#practical-list ul li a {
+    color: #1e7e34; /* Колір для посилання */
+    font-weight: 600;
+}
+
+section#practical-list ul li a:hover {
+    color: #16a085; /* Колір для посилання при наведенні */
+}
+
+section#practical-list ul li::-webkit-scrollbar {
+    height: 10px;
+}
+
+section#practical-list ul li::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+section#practical-list ul li::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Віконця з темами - трохи відрізняються */
+section.theme-container {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: rgba(44, 62, 80, 0.7); /* Темніший, але трохи більш прозорий фон */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+section.theme-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section.theme-container ul li {
+    background-color: rgba(52, 73, 94, 0.8); /* Легко відрізняється від практичних робіт */
+    padding: 1.5em;
+    margin: 1em 0;
+    border-radius: 10px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #fff; /* Зробити текст білим */
+}
+
+section.theme-container ul li a {
+    color: #1e7e34; /* Колір для посилання */
+    font-weight: 600;
+}
+
+section.theme-container ul li a:hover {
+    color: #16a085; /* Колір для посилання при наведенні */
+}
+
+section.theme-container ul li::-webkit-scrollbar {
+    height: 10px;
+}
+
+section.theme-container ul li::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+section.theme-container ul li::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Текст "Список практичних робіт" білим */
+section#practical-list h2 {
+    color: #fff; /* Зробити заголовок "Список практичних робіт" білим */
+}
+
+section#practical-list a {
+    color: #16a085; /* Посилання такого ж кольору, як на наведенні */
+}
+
+section#practical-list a:hover {
+    color: #1e7e34; /* Кольор для посилання при наведенні */
+}

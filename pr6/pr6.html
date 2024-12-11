@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Catch Game</title>
+    <link rel="stylesheet" href="style/style6.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="background"></div>
+        <div class="pokemon-container">
+            <!-- Покемони будуть додаватись тут через JS -->
+        </div>
+        <div class="scoreboard">Score: <span id="score">0</span></div>
+    </div>
+
+    <script>
+        const pokemons = [
+            {
+                name: "Bulbasaur",
+                img: "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
+            },
+            {
+                name: "Squirtle",
+                img: "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
+            },
+            {
+                name: "Charmander",
+                img: "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif"
+            },
+            {
+                name: "Pikachu",
+                img: "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif"
+            }
+        ];
+
+        const container = document.querySelector('.pokemon-container');
+        const scoreElement = document.getElementById('score');
+        let score = 0;
+
+        function spawnPokemon() {
+            container.innerHTML = '';
+            const randomPokemon = pokemons[Math.floor(Math.random() * pokemons.length)];
+
+            const pokemonElement = document.createElement('div');
+            pokemonElement.classList.add('pokemon');
+
+            // Рандомний напрямок польоту
+            const direction = Math.random() > 0.5 ? 'horizontal' : 'vertical';
+            if (direction === 'horizontal') {
+                pokemonElement.style.top = `${Math.random() * 80 + 10}%`;
+                pokemonElement.style.left = Math.random() > 0.5 ? '-10%' : '110%';
+                pokemonElement.style.animation = `fly-horizontal 5s linear`;
+            } else {
+                pokemonElement.style.left = `${Math.random() * 80 + 10}%`;
+                pokemonElement.style.top = Math.random() > 0.5 ? '-10%' : '110%';
+                pokemonElement.style.animation = `fly-vertical 5s linear`;
+            }
+
+            const img = document.createElement('img');
+            img.src = randomPokemon.img;
+            img.alt = randomPokemon.name;
+            img.addEventListener('click', () => {
+                score++;
+                scoreElement.textContent = score;
+                spawnPokemon();
+            });
+
+            pokemonElement.appendChild(img);
+            container.appendChild(pokemonElement);
+
+            setTimeout(() => {
+                if (container.contains(pokemonElement)) {
+                    spawnPokemon();
+                }
+            }, 5000); // Покемон зникає через 5 секунд
+        }
+
+        spawnPokemon();
+    </script>
+</body>
+</html>

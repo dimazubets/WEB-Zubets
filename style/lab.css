@@ -1,0 +1,49 @@
+/* Загальний стиль для сторінки лабораторних робіт */
+body {
+    background-image: url('style/imeg/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #005bb5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0.75em;
+    color: white;
+    display: block;
+}
+
+nav ul li a.active {
+    background-color: #003f7d;
+}
+
+section#labs-list {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}

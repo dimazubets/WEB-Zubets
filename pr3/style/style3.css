@@ -1,0 +1,58 @@
+/* Базові стилі для body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh; /* Висота на всю висоту екрану */
+    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; /* Центрування по вертикалі */
+    background: linear-gradient(120deg, #e0f7fa, #80deea); /* Новий градієнт з блакитними відтінками */
+    color: #333; /* Більш приємний для читання колір тексту */
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    gap: 15px; /* Відстань між кнопками */
+}
+
+/* Стиль для кнопки */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #1e88e5, #1565c0); /* Синій градієнт для кнопки */
+    color: white; /* Білий текст для контрасту */
+    font-size: 16px; /* Розмір шрифту */
+    font-weight: bold; /* Виділення тексту */
+    text-align: center; /* Вирівнювання тексту по центру */
+    text-decoration: none; /* Видалення підкреслення */
+    border-radius: 12px; /* Більш округлі кути */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Тінь для глибини */
+    transition: all 0.4s ease; /* Більш плавна анімація */
+}
+
+/* Стиль при наведенні мишки */
+.button:hover {
+    background: linear-gradient(90deg, #1565c0, #0d47a1); /* Темніший градієнт при наведенні */
+    transform: translateY(-7px) rotate(-1deg); /* Підняття та легкий нахил кнопки */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* Посилена тінь */
+}
+
+/* Стиль при натисканні */
+.button:active {
+    background: #0d47a1; /* Статичний колір при натисканні */
+    transform: translateY(3px); /* Легке опускання кнопки */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Зменшена тінь */
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    .button {
+        padding: 12px 24px; /* Зменшення розміру кнопки на маленьких екранах */
+        font-size: 14px; /* Менший текст для компактності */
+    }
+    .button-container {
+        flex-direction: column; /* Кнопки одна під одною на вузьких екранах */
+    }
+} /* Автор: Зубець Дмитро */
